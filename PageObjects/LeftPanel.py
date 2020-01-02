@@ -8,6 +8,7 @@ class LeftPanelLocators:
     add_database_button = (By.CSS_SELECTOR, "#pma_navigation_tree_content a.hover_show_full")
     selected_db = (By.CSS_SELECTOR, "li.database.selected")
 
+
 class LeftPanelTestData:
     db_names = ['information_schema', 'mysql', 'performance_schema', 'phpmyadmin', 'test']
 
@@ -15,13 +16,12 @@ class LeftPanelTestData:
 class LeftPanel(BasePage):
 
     def get_list_of_databases(self):
-        return [i.text for i in self.find_elements(LeftPanelLocators.databases_list_left_panel)]
+        actual = self.find_elements(LeftPanelLocators.databases_list_left_panel)
+        lst = [i.text for i in actual]
+        return lst
 
     def click_add_database(self):
-        return self.find_element(LeftPanelLocators.add_database_button).click()
+        self.find_elements(LeftPanelLocators.add_database_button)[0].click()
 
     def get_name_of_selected_database(self):
         return self.find_element(LeftPanelLocators.selected_db).text
-
-
-
