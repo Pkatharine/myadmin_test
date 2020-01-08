@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 
-from PageObjects.BasePage import BasePage
+from Application import Application
 
 
 class LeftPanelLocators:
@@ -13,7 +13,9 @@ class LeftPanelTestData:
     db_names = ['information_schema', 'mysql', 'performance_schema', 'phpmyadmin', 'test']
 
 
-class LeftPanel(BasePage):
+class LeftPanel:
+    def __init__(self, browser):
+        self.browser = browser
 
     def get_list_of_databases(self):
         actual = self.find_elements(LeftPanelLocators.databases_list_left_panel)
