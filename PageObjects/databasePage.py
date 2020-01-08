@@ -1,4 +1,4 @@
-from PageObjects.BasePage import BasePage
+from Application import Application
 from selenium.webdriver.common.by import By
 
 
@@ -7,7 +7,7 @@ class ServerDatabaseLocators:
     db_submit_button = (By.CSS_SELECTOR, "#buttonGo")
 
 
-class ServerDatabasePage(BasePage):
+class ServerDatabasePage(Application):
 
     def type_db_name(self, word):
         name_input = self.find_element(ServerDatabaseLocators.db_name_input)
