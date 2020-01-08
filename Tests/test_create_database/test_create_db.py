@@ -1,4 +1,4 @@
-from PageObjects.LeftPanel import LeftPanel
+from PageObjects.left_navigation_page import LeftNavigationPage
 
 #
 # def test_create_db_ui(browser):

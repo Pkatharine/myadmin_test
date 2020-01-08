@@ -11,7 +11,7 @@ class LeftPanelTestData:
     db_names = ['information_schema', 'mysql', 'performance_schema', 'phpmyadmin', 'test']
 
 
-class LeftPanel():
+class LeftNavigationPage():
 
     def __init__(self, browser):
         self.browser = browser
