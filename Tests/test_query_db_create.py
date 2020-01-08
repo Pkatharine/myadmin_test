@@ -3,7 +3,7 @@ import time
 from PageObjects.SQLPage import SQLPage
 
 
-def test_default_databases(browser):
+def test_default_databases(useThis):
     sql_page = SQLPage(browser)
     # sql_page.go_to_site()
     sql_page.click_element('[title="SQL"]')
