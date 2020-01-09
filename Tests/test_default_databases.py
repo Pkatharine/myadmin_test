@@ -1,4 +1,4 @@
-from PageObjects.left_navigation_page import LeftPanelTestData
+from page_objects.left_navigation_page import LeftPanelTestData
 
 
 def test_default_databases(app):

@@ -1,6 +1,6 @@
 import time
 
-from PageObjects.SQL_page import SQLPage
+from page_objects.sql_page import SQLPage
 
 
 def test_default_databases(useThis):

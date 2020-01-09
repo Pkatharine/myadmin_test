@@ -1,4 +1,4 @@
-from TestHelpers.createDbUITestHelper import createDbUITestHelper as testHelper
+from test_helpers.createDbUITestHelper import createDbUITestHelper as testHelper
 
 def test_create_db_ui(app):
     testHelper.create_database(app, "111")
