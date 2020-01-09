@@ -6,7 +6,7 @@ from Application import Application
 from wrapper import Wrapper
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture(scope="module")
 def browser():
     driver = webdriver.Chrome(ChromeDriverManager().install())
     driver.maximize_window()
@@ -16,7 +16,7 @@ def browser():
     driver.quit()
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture(scope="module")
 def app(browser):
     all_instances = Application(browser)
     return all_instances
