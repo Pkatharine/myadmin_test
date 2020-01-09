@@ -1,5 +1,6 @@
 from PageObjects.left_navigation_page import LeftNavigationPage
 from PageObjects.SQL_page import SQLPage
+from PageObjects.database_page import ServerDatabasePage
 
 """Guide:
     Create page with methods
@@ -15,3 +16,4 @@ class Application():
         self.browser = browser
         self.sqlPage = SQLPage(self.browser)
         self.left_panel = LeftNavigationPage(self.browser)
+        self.server_db = ServerDatabasePage(self.browser)

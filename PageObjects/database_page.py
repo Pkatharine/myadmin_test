@@ -1,4 +1,3 @@
-from Application import Application
 from selenium.webdriver.common.by import By
 
 
@@ -7,11 +6,13 @@ class ServerDatabaseLocators:
     db_submit_button = (By.CSS_SELECTOR, "#buttonGo")
 
 
-class ServerDatabasePage(Application):
+class ServerDatabasePage():
+    def __init__(self, browser):
+        self.browser = browser
 
     def type_db_name(self, word):
-        name_input = self.find_element(ServerDatabaseLocators.db_name_input)
+        name_input = self.browser.find_element(ServerDatabaseLocators.db_name_input)
         name_input.send_keys(word)
 
     def click_submit(self):
-        return self.find_element(ServerDatabaseLocators.db_submit_button).click()
+        return self.browser.find_element(ServerDatabaseLocators.db_submit_button).click()
