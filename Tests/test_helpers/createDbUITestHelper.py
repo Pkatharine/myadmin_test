@@ -5,6 +5,6 @@ class createDbUITestHelper:
         app.server_db.click_submit()
 
     def create_table(app, name):
-        app.create_table_page.click_go()
         app.create_table_page.type_table_name(name)
+        app.create_table_page.click_go()
         

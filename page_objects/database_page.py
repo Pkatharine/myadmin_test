@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 class ServerDatabaseLocators:
     db_name_input = (By.CSS_SELECTOR, "#text_create_db")
     db_submit_button = (By.CSS_SELECTOR, "#buttonGo")
-
+    
 
 class ServerDatabasePage():
     def __init__(self, browser):
@@ -16,3 +16,4 @@ class ServerDatabasePage():
 
     def click_submit(self):
         return self.browser.find_element(ServerDatabaseLocators.db_submit_button).click()
+

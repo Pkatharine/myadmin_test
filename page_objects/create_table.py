@@ -1,8 +1,9 @@
 from selenium.webdriver.common.by import By
  
 class CreateTablePageLocators:
-    table_name_input = (By.XPATH, "[name=table]")
-    go_button = (By.XPATH, "input[type=submit]")
+    table_name_input = (By.CSS_SELECTOR, "#create_table_form_minimal > fieldset:nth-child(1) > div:nth-child(4) > input[type=text]")
+    go_button = (By.CSS_SELECTOR, "#create_table_form_minimal > fieldset.tblFooters > input[type=submit]")
+
 
 class CreateTablePage():
     def __init__(self, browser):

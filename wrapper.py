@@ -70,7 +70,7 @@ class Wrapper(object):
 
     def get_attr_value(self, locator, attr):
         """Get attribute value of the element"""
-        WebDriverWait(self.driver, self.default_timeout, ignored_exceptions=StaleElementReferenceException)\
+        WebDriverWait(self.driver, self.default_timeout)\
             .until(EC.element_to_be_clickable(locator))
         element = self.get_element(locator)
         return element.get_attribute(attr)

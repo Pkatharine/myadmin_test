@@ -6,5 +6,8 @@ def test_create_db_ui(app):
 
 def test_create_table(app):
     testHelper.create_table(app, "table")
+    assert "table" == app.table_filler_page.get_value_of_table_name_picker()
 
-
+def test_create_column(app):
+    app.table_filler_page.type_first_column_definition("table", 255)
+    

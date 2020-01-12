@@ -8,6 +8,8 @@ verify_ssl = true
 [packages]
 pytest = "*"
 selenium = "*"
+webdriver_manager = "*"
+mysqldb = "*"
 
 [requires]
 python_version = "3.7"
