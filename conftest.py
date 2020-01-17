@@ -14,8 +14,6 @@ def browser():
     driver.get("http://localhost/phpmyadmin/index.php")
     browser = Wrapper(driver)
     yield browser
-    conn = DbConnection("111")
-    conn.delete_db()
     driver.quit()
 
 
@@ -23,3 +21,15 @@ def browser():
 def app(browser):
     all_instances = Application(browser)
     return all_instances
+
+
+@pytest.fixture
+def cleanup_db_delete():
+    '''
+    usage: @pytest.mark.usefixtures('cleanup_db_delete')
+    '''
+    yield
+    conn = DbConnection("111")
+    conn.delete_db()
+
+
