@@ -4,7 +4,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 from Application import Application
 from wrapper import Wrapper
-from db import DbConnection
+from db.DbConnection import DbConnection
 
 
 @pytest.fixture(scope="module")
