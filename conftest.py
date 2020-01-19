@@ -31,5 +31,3 @@ def cleanup_db_delete():
     yield
     conn = DbConnection("111")
     conn.delete_db()
-
-
