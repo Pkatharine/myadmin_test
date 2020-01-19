@@ -6,8 +6,10 @@ from page_objects.left_navigation_page import LeftPanelTestData
 @allure.severity(allure.severity_level.CRITICAL)
 @allure.link("http://localhost/phpmyadmin/index.php?lang=en", name='click PhpMyAdmin')
 def test_default_databases(app):
-    actual = app.left_panel.get_list_of_databases()
-    expected = LeftPanelTestData.db_names
+    with allure.step("Get list of actual databases present"):
+        actual = app.left_panel.get_list_of_databases()
+    with allure.step("Get list of expected databases"):
+        expected = LeftPanelTestData.db_names
     with allure.step("Verify list of default db's"):
         for i in expected:
             assert i in actual
